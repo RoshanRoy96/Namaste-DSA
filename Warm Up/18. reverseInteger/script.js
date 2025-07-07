@@ -7,12 +7,12 @@ function reverseInteger(n) {
     rev = 10 * rev + last;
     n = Math.floor(n / 10);
   }
-  if (nCopy < 0) {
-    return -rev;
-  } else {
-    return rev;
+  let limit = Math.pow(2, 31);
+  if (rev < -limit || rev > limit) {
+    return 0;
   }
+  return nCopy < 0 ? -rev : rev;
 }
 
-let result = reverseInteger(12345);
+let result = reverseInteger(120);
 console.log(result);
