@@ -1,11 +1,10 @@
 let arr = [3, 2, 1, 5, 3, 4, 8, 3];
 
 let x = 0;
-let val = 3;
 
-function removeElement(arr) {
+function removeElement(arr, val) {
   for (let i = 0; i < arr.length; i++) {
-    if (arr[i] != val) {
+    if (arr[i] != val) {     // shift elements to left if it is not equal to val.
       arr[x] = arr[i];
       x = x + 1;
     }
@@ -13,5 +12,5 @@ function removeElement(arr) {
   return x;
 }
 
-let result = removeElement(arr);
+let result = removeElement(arr, 3);
 console.log(result);
